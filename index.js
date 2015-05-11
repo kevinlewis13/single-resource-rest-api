@@ -7,7 +7,8 @@ var app = express();
 
 var router = express.Router();
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/profiles_dev');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/profiles_development');
+//creates collection? database?
 
 require('./routes/profiles_routes')(router);
 
